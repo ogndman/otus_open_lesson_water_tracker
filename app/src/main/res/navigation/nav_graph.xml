@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.watertracker.screen.fragment.main.MainFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:destination="@id/ListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ListFragment"
+        android:name="com.example.watertracker.screen.fragment.statistic.StatisticFragment"
+        android:label="@string/screen_statistic"
+        tools:layout="@layout/fragment_statistic">
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.watertracker.screen.fragment.add.AddWaterFragment"
+        android:label="@string/screen_add"
+        tools:layout="@layout/fragment_add_water">
+
+<!--        <action-->
+<!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
+<!--            app:enterAnim="@anim/nav_default_enter_anim"-->
+<!--            app:destination="@id/FirstFragment" />-->
+    </fragment>
+</navigation>
